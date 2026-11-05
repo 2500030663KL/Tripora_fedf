@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ride</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-ride">
+
+<div class="overlay"></div>
+
+<div class="page">
+
+    <div class="topbar">
+
+        <h1>🚕 Your Ride</h1>
+
+        <button onclick="location.href='user.html'">
+            Home
+        </button>
+
+    </div>
+
+    <div class="ride-card">
+
+        <h2 id="rideName"></h2>
+
+        <p>
+            Driver: Rahul Kumar
+        </p>
+
+        <p>
+            Vehicle: AP 07 AB 1234
+        </p>
+
+        <p>
+            Rating: ⭐ 4.8
+        </p>
+
+        <button
+            onclick="alert('Calling driver...')">
+
+            📞 Call Driver
+
+        </button>
+
+        <button
+            class="danger"
+            onclick="alert('SOS activated')">
+
+            🚨 SOS
+
+        </button>
+
+    </div>
+
+    <div class="otp-box">
+
+        <h2>
+            Enter Rider OTP
+        </h2>
+
+        <input
+            id="rideOtp"
+            maxlength="4"
+            placeholder="Enter OTP">
+
+        <p>
+            Demo OTP: <b>1234</b>
+        </p>
+
+        <button onclick="verifyOTP()">
+            Verify OTP
+        </button>
+
+        <p id="otpMsg"></p>
+
+    </div>
+
+    <div
+        id="mapPanel"
+        class="map-panel">
+
+        <h2>
+            🗺️ Ride Route
+        </h2>
+
+        <div class="mock-map">
+
+            <div class="road road1"></div>
+
+            <div class="road road2"></div>
+
+            <div class="car">🚕</div>
+
+            <div class="start">📍</div>
+
+            <div class="end">🏁</div>
+
+        </div>
+
+        <button onclick="openGoogleMaps()">
+            Open Google Maps Route
+        </button>
+
+        <button onclick="startRide()">
+            Start Ride
+        </button>
+
+    </div>
+
+    <div
+        id="completionPanel"
+        class="completion">
+
+        <h2>
+            ✅ Ride Completed
+        </h2>
+
+        <p id="finalFare"></p>
+
+        <h3>
+            Scan QR to Pay
+        </h3>
+
+        <div class="qr">
+            <div></div>
+        </div>
+
+        <p>
+            UPI Payment:
+            travelbooking@upi
+        </p>
+
+        <button onclick="finishRide()">
+            Finish Ride
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    loadRide();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* CDN Backgrounds */
+.bg-login {
+    background-image: url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80");
+}
+
+.bg-dashboard {
+    background-image: url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1920&q=80");
+}
+
+.bg-transport {
+    background-image: url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=80");
+}
+
+.bg-passenger {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80");
+}
+
+.bg-payment {
+    background-image: url("https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1920&q=80");
+}
+
+.bg-ride {
+    background-image: url("https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1920&q=80");
+}
+
+.bg-bookings {
+    background-image: url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80");
+}
+
+.bg-admin {
+    background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80");
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+.center-box {
+    width: 400px;
+    max-width: 90%;
+    margin: 70px auto;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.center-box h1 {
+    margin-bottom: 10px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    padding: 12px 18px;
+    margin: 8px 3px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.dark {
+    background: #222;
+}
+
+.danger {
+    background: #d62828;
+}
+
+.page {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.topbar {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome {
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    text-align: center;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-buttons {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.search-box,
+.form-box,
+.booking-summary,
+.ride-card,
+.otp-box,
+.map-panel,
+.completion {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+.search-box label,
+.form-box label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.search-button {
+    width: 100%;
+    background: #28a745;
+}
+
+.filters {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.96);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 15px;
+}
+
+.seat-section {
+    background: rgba(255, 255, 255, 0.96);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 55px);
+    gap: 12px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.seat {
+    background: #28a745;
+    color: white;
+    padding: 12px 5px;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background: #dc3545;
+}
+
+.seat.booked {
+    background: #555;
+    cursor: not-allowed;
+}
+
+.passenger-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+.mock-map {
+    height: 300px;
+    background: #d9e7d2;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.road {
+    position: absolute;
+    height: 20px;
+    background: #555;
+    width: 100%;
+}
+
+.road1 {
+    top: 100px;
+    transform: rotate(15deg);
+}
+
+.road2 {
+    top: 200px;
+    transform: rotate(-10deg);
+}
+
+.car {
+    position: absolute;
+    top: 130px;
+    left: 45%;
+    font-size: 35px;
+}
+
+.start {
+    position: absolute;
+    left: 30px;
+    top: 40px;
+    font-size: 30px;
+}
+
+.end {
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    font-size: 30px;
+}
+
+.completion {
+    display: none;
+    text-align: center;
+}
+
+.qr {
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #000 0,
+            #000 5px,
+            #fff 5px,
+            #fff 10px
+        );
+    padding: 15px;
+}
+
+.qr div {
+    width: 100%;
+    height: 100%;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #fff 0,
+            #fff 7px,
+            #000 7px,
+            #000 12px
+        );
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.admin-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.admin-card h2 {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.admin-user,
+.admin-booking,
+.admin-travel {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.admin-user h3,
+.admin-booking h3,
+.admin-travel h3 {
+    margin-top: 0;
+}
+
+.admin-user p,
+.admin-booking p,
+.admin-travel p {
+    margin: 7px 0;
+}
+
+a {
+    display: block;
+    margin: 15px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .admin-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+    .center-box {
+        margin-top: 30px;
+    }
+}

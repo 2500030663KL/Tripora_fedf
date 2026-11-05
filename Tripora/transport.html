@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Transport</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-transport">
+
+<div class="overlay"></div>
+
+<div class="page">
+
+    <div class="topbar">
+
+        <h1 id="transportTitle">
+            Travel
+        </h1>
+
+        <button onclick="location.href='user.html'">
+            Back
+        </button>
+
+    </div>
+
+    <div class="search-box">
+
+        <label>From</label>
+
+        <select id="from">
+
+            <option value="">
+                Select From
+            </option>
+
+            <option>Guntur</option>
+            <option>Vijayawada</option>
+            <option>Tenali</option>
+            <option>Hyderabad</option>
+            <option>Visakhapatnam</option>
+            <option>Tirupati</option>
+            <option>Chennai</option>
+            <option>Bengaluru</option>
+            <option>Warangal</option>
+            <option>Rajahmundry</option>
+            <option>Nellore</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+            <option>Kolkata</option>
+            <option>Goa</option>
+            <option>Jaipur</option>
+            <option>Ahmedabad</option>
+
+        </select>
+
+        <button onclick="useCurrentLocation()">
+            📍 Current Location
+        </button>
+
+        <label>To</label>
+
+        <select id="to">
+
+            <option value="">
+                Select To
+            </option>
+
+            <option>Guntur</option>
+            <option>Vijayawada</option>
+            <option>Tenali</option>
+            <option>Hyderabad</option>
+            <option>Visakhapatnam</option>
+            <option>Tirupati</option>
+            <option>Chennai</option>
+            <option>Bengaluru</option>
+            <option>Warangal</option>
+            <option>Rajahmundry</option>
+            <option>Nellore</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+            <option>Kolkata</option>
+            <option>Goa</option>
+            <option>Jaipur</option>
+            <option>Ahmedabad</option>
+
+        </select>
+
+        <div id="dateBox">
+
+            <label>Travel Date</label>
+
+            <input
+                type="date"
+                id="travelDate">
+
+        </div>
+
+        <div id="tripBox">
+
+            <label>Trip Type</label>
+
+            <select id="tripType">
+
+                <option>One Way</option>
+                <option>Round Trip</option>
+
+            </select>
+
+        </div>
+
+        <button
+            class="search-button"
+            onclick="searchTravel()">
+
+            🔍 Search
+
+        </button>
+
+    </div>
+
+    <div class="filters">
+
+        <select
+            id="sortBy"
+            onchange="searchTravel()">
+
+            <option value="recommended">
+                Recommended
+            </option>
+
+            <option value="cheapest">
+                Cheapest
+            </option>
+
+            <option value="fastest">
+                Fastest
+            </option>
+
+            <option value="earliest">
+                Earliest
+            </option>
+
+        </select>
+
+    </div>
+
+    <div id="results"></div>
+
+    <div
+        id="seatSection"
+        class="seat-section">
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    loadTransport();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-payment">
+
+<div class="overlay"></div>
+
+<div class="page">
+
+    <div class="topbar">
+
+        <h1>💳 Payment</h1>
+
+    </div>
+
+    <div
+        class="booking-summary"
+        id="paymentSummary">
+    </div>
+
+    <div class="form-box">
+
+        <h2>Select Payment Method</h2>
+
+        <select
+            id="paymentMethod"
+            onchange="paymentFields()">
+
+            <option value="UPI">
+                UPI
+            </option>
+
+            <option value="Card">
+                Card
+            </option>
+
+            <option value="Net Banking">
+                Net Banking
+            </option>
+
+        </select>
+
+        <div id="paymentInput"></div>
+
+        <button onclick="payNow()">
+            Pay Now
+        </button>
+
+        <p id="paymentMsg"></p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    loadPayment();
+    paymentFields();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-admin">
+
+<div class="overlay"></div>
+
+<div class="page">
+
+    <div class="topbar">
+
+        <h1>⚙️ Admin Dashboard</h1>
+
+        <button onclick="adminLogout()">
+            Logout
+        </button>
+
+    </div>
+
+    <div class="welcome">
+
+        <h2>
+            Welcome,
+            <span id="adminWelcome"></span>
+        </h2>
+
+        <p>
+            Manage users, bookings and travel services
+        </p>
+
+    </div>
+
+
+    <div class="admin-grid">
+
+        <div class="admin-card">
+
+            <h2 id="totalUsers">
+                0
+            </h2>
+
+            <p>
+                Registered Users
+            </p>
+
+        </div>
+
+        <div class="admin-card">
+
+            <h2 id="totalBookings">
+                0
+            </h2>
+
+            <p>
+                Total Bookings
+            </p>
+
+        </div>
+
+        <div class="admin-card">
+
+            <h2 id="totalRevenue">
+                ₹0
+            </h2>
+
+            <p>
+                Total Revenue
+            </p>
+
+        </div>
+
+        <div class="admin-card">
+
+            <h2 id="completedRides">
+                0
+            </h2>
+
+            <p>
+                Completed Rides
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="form-box">
+
+        <h2>
+            👥 Registered Users
+        </h2>
+
+        <div id="adminUserList"></div>
+
+    </div>
+
+
+    <div class="form-box">
+
+        <h2>
+            🎫 All User Bookings
+        </h2>
+
+        <div id="adminBookingList"></div>
+
+    </div>
+
+
+    <div class="form-box">
+
+        <h2>
+            ➕ Add Travel Option
+        </h2>
+
+        <select id="adminType">
+
+            <option value="Train">
+                Train
+            </option>
+
+            <option value="Bus">
+                Bus
+            </option>
+
+        </select>
+
+        <input
+            id="adminTravelName"
+            placeholder="Travel Name">
+
+        <input
+            id="adminFrom"
+            placeholder="From">
+
+        <input
+            id="adminTo"
+            placeholder="To">
+
+        <input
+            id="adminDeparture"
+            placeholder="Departure">
+
+        <input
+            id="adminArrival"
+            placeholder="Arrival">
+
+        <input
+            id="adminDuration"
+            type="number"
+            placeholder="Duration in minutes">
+
+        <input
+            id="adminPrice"
+            type="number"
+            placeholder="Price">
+
+        <button onclick="addTravelOption()">
+            Add Travel
+        </button>
+
+        <p id="adminTravelMsg"></p>
+
+    </div>
+
+
+    <div class="form-box">
+
+        <h2>
+            🚆 Available Travel Options
+        </h2>
+
+        <div id="adminTravelList"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    loadAdmin();
+</script>
+
+</body>
+</html>

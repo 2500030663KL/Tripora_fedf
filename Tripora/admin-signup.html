@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-admin">
+
+<div class="overlay"></div>
+
+<div class="center-box">
+
+    <h1>🔐 Admin Signup</h1>
+
+    <p>
+        Create Admin Account
+    </p>
+
+    <input
+        id="adminName"
+        type="text"
+        placeholder="Admin Name">
+
+    <input
+        id="adminEmail"
+        type="email"
+        placeholder="Admin Email">
+
+    <input
+        id="adminPassword"
+        type="password"
+        placeholder="Password">
+
+    <input
+        id="adminConfirmPassword"
+        type="password"
+        placeholder="Confirm Password">
+
+    <button onclick="adminSignup()">
+        Sign Up
+    </button>
+
+    <button
+        class="dark"
+        onclick="location.href='admin-login.html'">
+
+        Already have an account? Login
+
+    </button>
+
+    <p id="adminSignupMsg"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

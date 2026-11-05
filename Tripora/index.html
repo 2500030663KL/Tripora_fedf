@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Booking - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-login">
+
+<div class="overlay"></div>
+
+<div class="center-box">
+
+    <h1>✈️ Travel Booking</h1>
+
+    <p>Create an account or login</p>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Enter Username">
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter Password">
+
+    <button onclick="signup()">
+        Sign Up
+    </button>
+
+    <button class="dark" onclick="login()">
+        Login
+    </button>
+
+    <button onclick="location.href='admin-login.html'">
+        Admin Login
+    </button>
+
+    <p id="msg"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passenger Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-passenger">
+
+<div class="overlay"></div>
+
+<div class="page">
+
+    <div class="topbar">
+
+        <h1>Passenger Details</h1>
+
+        <button onclick="history.back()">
+            Back
+        </button>
+
+    </div>
+
+    <div
+        class="booking-summary"
+        id="passengerSummary">
+    </div>
+
+    <div class="form-box">
+
+        <label>
+            Number of Passengers
+        </label>
+
+        <select
+            id="passengerCount"
+            onchange="createPassengerFields()">
+
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+
+        </select>
+
+        <div id="passengerFields"></div>
+
+        <label>
+            Promo Code
+        </label>
+
+        <input
+            id="promo"
+            placeholder="TRAVEL10 or FIRST50">
+
+        <button onclick="continuePassenger()">
+            Continue to Payment
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    loadPassenger();
+</script>
+
+</body>
+</html>
